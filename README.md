@@ -69,8 +69,8 @@ This application provides a multi-tenant cost tracking system where:
 Tenant (1) ──────── (N) Team (1) ──────── (N) CostRecord
    │                     │                        │
    ├─ id (UUID)          ├─ id (UUID)            ├─ id (UUID)
-   └─ name               ├─ tenant_id (FK)       ├─ tenant_id (FK)
-                         └─ name                 ├─ team_id (FK)
+   └─ name               ├─ tenant_id            ├─ tenant_id 
+                         └─ name                 ├─ team_id 
                                                  ├─ date
                                                  └─ cost
 ```
@@ -687,25 +687,6 @@ docker exec cost-tracker-postgres psql -U postgres -d tenantdb -c "SELECT * FROM
 - **Benefit**: Consistent across all JPA implementations
 - **Trade-off**: Slightly more code in services
 - **Alternative**: JPA auto-generation (implementation dependent)
-
-## Future Enhancements
-
-### Short Term
-- [ ] Input validation with custom error messages
-- [ ] API documentation with OpenAPI/Swagger
-- [ ] Logging and monitoring integration
-
-### Medium Term
-- [ ] Caching layer for improved performance
-- [ ] Audit trail for all operations
-- [ ] Bulk operations for cost records
-- [ ] Export functionality (CSV, Excel)
-
-### Long Term
-- [ ] Authentication and authorization (JWT, OAuth2)
-- [ ] Multi-region deployment support
-- [ ] Advanced analytics and dashboards
-- [ ] Integration with cloud cost APIs
 
 ---
 
