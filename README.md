@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # Multi-Tenant Cost Tracking API
 
 A comprehensive Spring Boot application that tracks daily cloud spend for multiple companies (tenants) with strict tenant isolation and security.
@@ -701,4 +701,4 @@ For questions or issues:
 **Happy Cost Tracking!**
 =======
 # Multi-Tenant
->>>>>>> 0433cd95695cc7d80875607b59c7d39c923a8757
+
